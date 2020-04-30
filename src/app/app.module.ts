@@ -8,6 +8,9 @@ import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { FormsModule } from "@angular/forms";
 import { UsernameInputComponent } from './username-input/username-input.component';
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './counter.reducer';
+import { MyCounterComponent } from './my-counter/my-counter.component'
 
 @NgModule({
   declarations: [
@@ -16,11 +19,13 @@ import { UsernameInputComponent } from './username-input/username-input.componen
     ServersComponent,
     WarningAlertComponent,
     SuccessAlertComponent,
-    UsernameInputComponent
+    UsernameInputComponent,
+    MyCounterComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    StoreModule.forRoot({ count: counterReducer }, {})
   ],
   providers: [],
   bootstrap: [AppComponent]
