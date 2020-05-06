@@ -7,14 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivePracComponent {
   isDisplayable = false;
-  clicksArr = [];
   timeStamp = Date().split(' ', 5).join(' ');
-
+  clickTimes = [];
 
   constructor() { }
 
   onDisplay() {
-    this.clicksArr.push(this.timeStamp)
+    this.clickTimes.push(this.timeStamp)
     return this.isDisplayable = true;
+  }
+
+  resetTimestamps() {
+    this.clickTimes = []
   }
 }

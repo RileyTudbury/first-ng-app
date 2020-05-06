@@ -1,3 +1,4 @@
-<button (click)="onDisplay()">Display Details</button>
-<p *ngIf="isDisplayable">Secret Password = tuna</p>
-<p *ngFor="let stamp of clicksArr"> {{ stamp }} </p>
+<button class="btn btn-secondary" (click)="onDisplay()">Display Details</button>
+<button class="btn btn-warning mx-1" (click)="resetTimestamps()">Reset Timestamps</button>
+<p *ngIf="isDisplayable" class="card-header m-1">Secret Password = tuna</p>
+<p *ngFor="let stamp of clickTimes"> {{ stamp }} </p>
