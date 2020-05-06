@@ -10,7 +10,8 @@ import { FormsModule } from "@angular/forms";
 import { UsernameInputComponent } from './username-input/username-input.component';
 import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './counter.reducer';
-import { MyCounterComponent } from './my-counter/my-counter.component'
+import { MyCounterComponent } from './my-counter/my-counter.component';
+import { DirectivePracComponent } from './directive-prac/directive-prac.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MyCounterComponent } from './my-counter/my-counter.component'
     WarningAlertComponent,
     SuccessAlertComponent,
     UsernameInputComponent,
-    MyCounterComponent
+    MyCounterComponent,
+    DirectivePracComponent
   ],
   imports: [
     BrowserModule,
