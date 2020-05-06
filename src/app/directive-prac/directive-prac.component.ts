@@ -7,17 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivePracComponent {
   isDisplayable = false;
+  clickCounter = 0;
   timeStamp = Date().split(' ', 5).join(' ');
   clickTimes = [];
+
 
   constructor() { }
 
   onDisplay() {
-    this.clickTimes.push(this.timeStamp)
+    this.clickCounter++
+    this.clickTimes.push({ time: this.timeStamp, clicks: this.clickCounter })
     return this.isDisplayable = true;
   }
 
   resetTimestamps() {
     this.clickTimes = []
+  }
+
+  getColor(numClicks) {
+    return numClicks > 4 ? 'blue' : 'white'
   }
 }

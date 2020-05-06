@@ -1,4 +1,7 @@
 <button class="btn btn-secondary" (click)="onDisplay()">Display Details</button>
 <button class="btn btn-warning mx-1" (click)="resetTimestamps()">Reset Timestamps</button>
 <p *ngIf="isDisplayable" class="card-header m-1">Secret Password = tuna</p>
-<p *ngFor="let stamp of clickTimes"> {{ stamp }} </p>
+<p *ngFor="let stamp of clickTimes" [ngStyle]="{backgroundColor: getColor(stamp.clicks)}"
+  [ngClass]="{white: stamp.clicks > 4}"> {{ stamp.time }}
+  {{ stamp.clicks}}
+</p>
